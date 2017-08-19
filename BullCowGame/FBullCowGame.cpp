@@ -1,4 +1,6 @@
 #pragma once
+
+#include "stdafx.h"
 #include "FBullCowGame.h"
 #include <map>
 #define TMap std::map
@@ -13,12 +15,12 @@ int32 FBullCowGame::GetHiddenWordLength() const { return MyHiddenWord.length(); 
 bool FBullCowGame::IsGameWon() const { return bGameIsWon; }
 
 int32 FBullCowGame::GetMaxTries() const { 
-	TMap<int32, int32> WordLengthToMaxTries{ { 3,4 },{ 4,7 },{ 5,10 },{ 6,16 },{ 7,20 } };
+	TMap<int32, int32> WordLengthToMaxTries{ { 3,7 },{ 4,10 },{ 5,10 },{ 6,16 },{ 7,20 } };
 
 	return WordLengthToMaxTries[MyHiddenWord.length()];
 }
 void FBullCowGame::Reset() {
-	const FString HIDDEN_WORD = "plane";
+	const FString HIDDEN_WORD = "say";
 
 	MyHiddenWord = HIDDEN_WORD;
 	MyCurrentTry = 1;

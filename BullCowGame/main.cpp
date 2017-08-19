@@ -4,6 +4,7 @@ user interaction. For game logic see the FBullCowGame class.
 */
 #pragma once
 
+#include "stdafx.h"
 #include <iostream>
 #include <string>	
 #include "FBullCowGame.h"
